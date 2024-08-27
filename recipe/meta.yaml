@@ -1,5 +1,5 @@
 {% set package_name = "atef" %}
-{% set version = "1.4.0" %}
+{% set version = "1.5.0" %}
 
 package:
   name: {{ package_name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/pcdshub/atef/archive/v{{ version }}.tar.gz
-  sha256: c3eee871564684008ab4f8037c80b00095a2460b665cba37c841546e56221519
+  sha256: 04e00292efcc7838e50a00a4d4dd7e1a79b07536fec8852f8dbf5750c8a9e228
 
 build:
   entry_points:
@@ -19,52 +19,53 @@ build:
 
 
 requirements:
-  build:
-  - python >=3.7
-  - pip
-  - setuptools_scm
+  host:
+    - python >=3.7
+    - pip
+    - setuptools
+    - setuptools_scm
   run:
-  - python >=3.7
-  - apischema
-  - archapp >=1.1.0
-  - bluesky
-  - bluesky-queueserver >=0.0.19
-  - bluesky-widgets
-  - databroker <2.0.0a0
-  - happi
-  - ipython
-  - numpy
-  - ophyd
-  - pcdsutils >=0.14.1
-  - pydm
-  - pyyaml
-  - qtpy
-  - pyqt
-  - reportlab
-  - rich
-  - typhos
-  - typing-extensions
+    - python >=3.7
+    - apischema
+    - archapp >=1.1.0
+    - bluesky-base
+    - bluesky-queueserver >=0.0.19
+    - bluesky-widgets
+    - databroker <2.0.0a0
+    - happi
+    - ipython
+    - numpy
+    - ophyd
+    - pcdsutils >=0.14.1
+    - pydm
+    - pyyaml
+    - qtpy
+    - pyqt
+    - reportlab
+    - rich
+    - typhos
+    - typing-extensions
 
 
 
 test:
   imports:
-  - atef
+    - atef
   requires:
-  - coverage
-  - doctr
-  - docs-versions-menu
-  - numpydoc
-  - flake8
-  - pytest
-  - pytest-timeout
-  - pytest-asyncio
-  - pytest-qt
-  - pcdsdevices >=7.1.0
-  - sphinx
-  - sphinx-copybutton
-  - sphinx_rtd_theme
-  - sphinxcontrib-jquery
+    - coverage
+    - doctr
+    - docs-versions-menu
+    - numpydoc
+    - flake8
+    - pytest
+    - pytest-timeout
+    - pytest-asyncio
+    - pytest-qt
+    - pcdsdevices >=7.1.0
+    - sphinx
+    - sphinx-copybutton
+    - sphinx_rtd_theme
+    - sphinxcontrib-jquery
 
 
 
