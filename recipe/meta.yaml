@@ -1,5 +1,5 @@
 {% set package_name = "atef" %}
-{% set version = "1.5.1" %}
+{% set version = "1.5.2" %}
 
 package:
   name: {{ package_name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/pcdshub/atef/archive/v{{ version }}.tar.gz
-  sha256: 10f2f86df1eda5997def2d465b66527612706cf7c670770ee88e051690338886
+  sha256: b7d13efe0b9c642ebfa95be2dc5b508cef921527caa8998b41624c18dec9717a
 
 build:
   entry_points:
