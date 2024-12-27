@@ -53,6 +53,7 @@ test:
   imports:
     - atef
   requires:
+    - python {{ python_min }}
     - coverage
     - doctr
     - docs-versions-menu
