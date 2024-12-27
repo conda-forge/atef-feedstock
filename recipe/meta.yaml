@@ -1,5 +1,6 @@
 {% set package_name = "atef" %}
 {% set version = "1.5.2" %}
+{% set python_min = "3.9" %}
 
 package:
   name: {{ package_name }}
@@ -20,12 +21,12 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     - setuptools
     - setuptools_scm
   run:
-    - python >=3.7
+    - python >= {{ python_min }}
     - apischema
     - archapp >=1.1.0
     - bluesky-base
