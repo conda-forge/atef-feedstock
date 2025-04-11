@@ -32,9 +32,12 @@ requirements:
     - bluesky-base
     - bluesky-queueserver >=0.0.19
     - bluesky-widgets
+    # >2 incompatible with pydantic v2
     - databroker <2.0.0a0
     - happi
     - ipython
+    # higher versions pull pyside6
+    - matplotlib <=3.9.0
     - numpy
     - ophyd
     - pcdsutils >=0.14.1
