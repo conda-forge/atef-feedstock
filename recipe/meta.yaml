@@ -1,5 +1,5 @@
 {% set package_name = "atef" %}
-{% set version = "1.5.2" %}
+{% set version = "1.5.3" %}
 {% set python_min = "3.9" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/pcdshub/atef/archive/v{{ version }}.tar.gz
-  sha256: b7d13efe0b9c642ebfa95be2dc5b508cef921527caa8998b41624c18dec9717a
+  sha256: e56a3fa6878947b14f09907a4bb420c91f3d47c6b26bc2abb4c5d22ded370493
 
 build:
   entry_points:
@@ -32,9 +32,12 @@ requirements:
     - bluesky-base
     - bluesky-queueserver >=0.0.19
     - bluesky-widgets
+    # >2 incompatible with pydantic v2
     - databroker <2.0.0a0
     - happi
     - ipython
+    # higher versions pull pyside6
+    - matplotlib <=3.9.0
     - numpy
     - ophyd
     - pcdsutils >=0.14.1
