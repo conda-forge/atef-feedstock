@@ -1,6 +1,5 @@
 {% set package_name = "atef" %}
-{% set version = "1.6.2" %}
-{% set python_min = "3.9" %}
+{% set version = "1.6.3" %}
 
 package:
   name: {{ package_name }}
@@ -8,7 +7,7 @@ package:
 
 source:
   url: https://github.com/pcdshub/atef/archive/v{{ version }}.tar.gz
-  sha256: f38c356a79730e4f3f83f6a47fdb007f0b3b806628225bfa684f9eed9758aedf
+  sha256: 1b3be8fe42e681f60cd300911b731e203cae493347e5009529fcfcb1eeebf895
 
 build:
   entry_points:
@@ -36,8 +35,7 @@ requirements:
     - databroker <2.0.0a0
     - happi
     - ipython
-    # higher versions pull pyside6
-    - matplotlib <=3.9.0
+    - matplotlib-base
     - numpy
     - ophyd
     - pcdsutils >=0.14.1
