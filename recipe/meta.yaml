@@ -1,6 +1,5 @@
 {% set package_name = "atef" %}
 {% set version = "1.6.3" %}
-{% set python_min = "3.9" %}
 
 package:
   name: {{ package_name }}
