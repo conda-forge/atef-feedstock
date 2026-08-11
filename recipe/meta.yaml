@@ -35,8 +35,7 @@ requirements:
     - databroker <2.0.0a0
     - happi
     - ipython
-    # higher versions pull pyside6
-    - matplotlib <=3.9.0
+    - matplotlib-base
     - numpy
     - ophyd
     - pcdsutils >=0.14.1
